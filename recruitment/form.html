@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Oprec - UAKI UB</title>
+    <link rel="icon" href="/assets-hero/logoUAKI.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap">
+
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../components/components.css">
+    <link rel="stylesheet" href="recruitment.css">
+</head>
+<body class="page-oprec-form d-flex flex-column min-vh-100">
+
+    <div id="uakiNavbar"></div>
+
+    <main class="oprec-wrapper">
+        <div class="oprec-decor" aria-hidden="true">
+            <img src="/assets-recruitment/daun-crop.svg" class="decor-leaf-left" alt="">
+            <img src="/assets-recruitment/daun-crop.svg" class="decor-leaf-right" alt="">
+            <img src="/assets-recruitment/circle.svg" class="decor-circle-left" alt="">
+            <img src="/assets-recruitment/circle.svg" class="decor-circle-right" alt="">
+        </div>
+
+        <div class="oprec-card">
+
+            <div class="oprec-topbar">
+                <div class="oprec-stepper" id="oprecStepper">
+                    <!-- Diisi otomatis lewat recruitment.js -->
+                </div>
+                <span class="oprec-step-badge" id="oprecStepBadge">Langkah 1 dari 4</span>
+            </div>
+
+            <!-- STEP 1: Data Diri -->
+            <section class="oprec-step-panel is-active" data-step="1">
+                <h2 class="oprec-step-title">Data Diri</h2>
+                <p class="oprec-step-subtitle">Lengkapi informasi data diri kamu dengan benar.</p>
+                <hr class="oprec-divider">
+
+                <form id="formDataDiri" novalidate>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="oprec-label" for="namaLengkap">Nama Lengkap<span class="wajib">*</span></label>
+                            <input type="text" class="form-control" id="namaLengkap" placeholder="Masukkan nama lengkap">
+                            <div class="form-error">Nama lengkap wajib diisi.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="oprec-label" for="nim">NIM<span class="wajib">*</span></label>
+                            <input type="text" class="form-control" id="nim" placeholder="Masukkan NIM">
+                            <div class="form-error">NIM wajib diisi.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="oprec-label" for="fakultas">Fakultas<span class="wajib">*</span></label>
+                            <select class="form-select" id="fakultas">
+                                <option value="" selected disabled>Pilih Fakultas</option>
+                            </select>
+                            <div class="form-error">Fakultas wajib dipilih.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="oprec-label" for="prodi">Program Studi<span class="wajib">*</span></label>
+                            <select class="form-select" id="prodi" disabled>
+                                <option value="" selected disabled>Pilih Program Studi</option>
+                            </select>
+                            <div class="form-error">Program studi wajib dipilih.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="oprec-label" for="whatsapp">No. Whatsapp Aktif<span class="wajib">*</span></label>
+                            <input type="text" class="form-control" id="whatsapp" placeholder="08xxxxxxxxxx">
+                            <div class="form-error">No. Whatsapp wajib diisi.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="oprec-label" for="emailOprec">Email Aktif<span class="wajib">*</span></label>
+                            <input type="email" class="form-control" id="emailOprec" placeholder="nama@email.com">
+                            <div class="form-error">Email wajib diisi.</div>
+                        </div>
+                    </div>
+                    <p class="oprec-hint-wajib">*Wajib diisi</p>
+                </form>
+            </section>
+
+            <!-- STEP 2: Pilih Departemen -->
+            <section class="oprec-step-panel" data-step="2">
+                <h2 class="oprec-step-title">Pilih Departemen</h2>
+                <p class="oprec-step-subtitle">Pilih maksimal 2 departemen yang kamu minati.</p>
+                <hr class="oprec-divider">
+
+                <div class="departemen-grid" id="departemenGrid">
+                    <!-- Diisi otomatis dari daftarDepartemen (dummy-data) -->
+                </div>
+                <div class="form-error" id="errorDepartemen" style="margin-top: 12px;">Pilih minimal 1 departemen.</div>
+            </section>
+
+            <!-- STEP 3: Esai / Motivasi -->
+            <section class="oprec-step-panel" data-step="3">
+                <h2 class="oprec-step-title">Essai / Motivasi</h2>
+                <p class="oprec-step-subtitle">Ceritakan motivasi dan alasanmu ingin bergabung dengan Staff Muda UAKI.</p>
+                <hr class="oprec-divider">
+
+                <div class="esai-grid" id="esaiGrid">
+                    <!-- Diisi otomatis dari daftarEsai (dummy-data) -->
+                </div>
+                <p class="oprec-hint-wajib">*Wajib diisi</p>
+            </section>
+
+            <!-- STEP 4: Periksa Data -->
+            <section class="oprec-step-panel" data-step="4">
+                <h2 class="oprec-step-title">Periksa Data</h2>
+                <p class="oprec-step-subtitle">Pastikan semua data yang kamu isi sudah benar.</p>
+                <hr class="oprec-divider">
+
+                <div id="reviewContainer">
+                    <!-- Diisi otomatis pas masuk step 4, di recruitment.js -->
+                </div>
+            </section>
+
+            <div class="oprec-nav">
+                <button type="button" class="btn-oprec-secondary" id="btnKembali" style="visibility: hidden;">Kembali</button>
+                <button type="button" class="btn-oprec-secondary" id="btnLanjut" disabled>Lanjutkan &rarr;</button>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="uakiFooter"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../components/components.js"></script>
+    <script src="../js/dummy-data.js"></script>
+    <script src="recruitment.js"></script>
+</body>
+</html>

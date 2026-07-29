@@ -1,0 +1,384 @@
+/* Halaman status oprec: success, countdown pengumuman, result*/
+
+/* Base */
+body {
+    font-family: var(--font_inter);
+    background-color: var(--bg_cream);
+    color: var(--hijau_teks);
+}
+
+.status-wrapper {
+    position: relative;
+    overflow: hidden;
+    min-height: calc(100vh - 200px);
+    padding: 48px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dekorasi: 9 objek  */
+.status-decor {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.status-decor img { position: absolute; }
+
+/* Kiri atas: dot, blob, bintang */
+.decor-dot {
+    top: -25px;
+    left: 6%;
+    width: 70px;
+    opacity: 0.9;
+}
+
+.decor-blob-1 {
+    top: 80px;
+    left: -10px;
+    width: 150px;
+    opacity: 0.9;
+}
+
+.decor-star-1 {
+    top: 25%;
+    left: 14%;
+    width: 30px;
+}
+
+/* Kiri bawah: lingkaran, daun */
+.decor-circle {
+    left: -6%;
+    bottom: -120px;
+    width: 240px;
+    opacity: 0.8;
+}
+
+.decor-leaf-left {
+    left: 0;
+    bottom: -120px;
+    width: 320px;
+}
+
+/* Kanan atas: blob, daun */
+.decor-blob-3 {
+    top: -80px;
+    right: -50px;
+    width: 450px;
+    opacity: 0.9;
+    transform: skewX(20deg);
+}
+
+.decor-leaf-right {
+    right: -45px;
+    top: -80px;
+    width: 320px;
+    transform: scaleX(-1);
+}
+
+/* Kanan bawah: blob, bintang */
+.decor-blob-2 {
+    bottom: -40px;
+    right: -10px;
+    width: 150px;
+    opacity: 0.9;
+    transform: scaleX(-1);
+}
+
+.decor-star-2 {
+    bottom: 26%;
+    right: 15%;
+    width: 30px;
+}
+
+
+/* Kartu status */
+.status-card {
+    position: relative;
+    z-index: 1;
+    background-color: var(--card_cream);
+    border: 1px solid var(--hijau_tua);
+    border-radius: var(--card_radius);
+    box-shadow: var(--card_shadow);
+    padding: 88px 96px;
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* card transparan (khusus announcement) */
+.status-card-transparent {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.status-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 32px 0;
+}
+
+.status-divider::before,
+.status-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: #B0B0AE;
+}
+
+.status-divider img { width: 30px; height: 30px; flex-shrink: 0; }
+
+.countdown-label {
+    font-family: var(--font_monsterrat);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--hijau_tua);
+    margin-bottom: 24px;
+}
+
+/* Kotak countdown */
+.countdown {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    max-width: 100%;
+    background: linear-gradient(180deg, #fdfcf6 0%, #f5f0dd 100%);
+    border: 2.5px solid #A6B465;
+    border-radius: 16px;
+    padding: 36px 5px;
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,0.04),
+        0 10px 10px rgba(0,0,0,0.40);
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 32px;
+}
+
+.countdown-angka {
+    font-size: 48px;
+    font-weight: 700;
+    font-family: var(--font_monsterrat);
+    color: #2d3a1e;
+    line-height: 1;
+
+    background: linear-gradient(180deg, #626F44 30%, #A6B465 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.countdown-unit {
+    font-size: 14px;
+    color: #4a5e3a;
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+.countdown-pemisah {
+    font-size: 40px;
+    color: #c4c0a8;
+    font-weight: 300;
+}
+
+.status-footnote {
+    font-family: var(--font_monsterrat);
+    font-weight: 800;
+    font-size: 13px;
+    color: #ED861E;
+    margin-top: 32px;
+}
+
+/* Dipakai pas countdown selesai */
+.status-footnote.is-selesai {
+    color: var(--hijau_tua);
+}
+
+.status-icon-check {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+
+.status-icon-x {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.status-title {
+    font-family: var(--font_monsterrat);
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--hijau_tua);
+    margin-bottom: 6px;
+}
+
+.status-subtitle {
+    font-size: 14px;
+    color: var(--hijau_muda);
+    margin-bottom: 28px;
+    line-height: 1.5;
+    word-spacing: 1px;
+}
+
+.status-title-merah { color: #791F1F; }
+.status-subtitle-merah { color: #791F1F; font-weight: 700; }
+.status-subtitle-lolos { color: #A6B465; font-weight: 600; }
+
+
+.status-wa-box {
+    border: 1px solid #626F44;
+    border-radius: var(--input_radius);
+    background-color: rgba(255, 250, 226, 0.5);
+    padding: 20px 28px;
+    max-width: 460px;
+    margin: 0 auto 20px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+body.page-result .status-wa-box {
+    max-width: 600px;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+
+
+.status-wa-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    margin-top: 2px;
+}
+
+body.page-result .status-wa-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.status-wa-judul {
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--hijau_tua);
+    margin-bottom: 4px;
+}
+
+.status-wa-desc {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #ED861E;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.btn-status-primary,
+.btn-status-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: var(--input_radius);
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.status-lanjut-wrap {
+    text-align: center;
+}
+
+.btn-status-primary {
+    background-color: var(--hijau_tua);
+    color: #ffffff;
+    border: none;
+}
+
+.btn-status-primary:hover { background-color: #525d38; color: #ffffff; }
+
+.btn-status-outline {
+    background-color: #ffffff;
+    color: var(--hijau_teks);
+    border: 1px solid var(--hijau_tua);
+}
+
+.btn-status-outline:hover { background-color: #f7f7f2; color: var(--hijau_teks); }
+
+.btn-icon-inline {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+@media (max-width: 900px) {
+    .status-wrapper { min-height: auto; padding: 40px 20px; }
+
+    .status-card { width: 94%; max-width: 500px; padding: 56px 32px; }
+
+    .status-wa-box { max-width: 100%; }
+
+    .countdown { padding: 22px 6px; }
+    .countdown-item { padding: 0 16px; }
+    .countdown-angka { font-size: 34px; }
+    .countdown-pemisah { font-size: 28px; }
+}
+
+@media (max-width: 560px) {
+    .status-wrapper { padding: 28px 16px; }
+
+    .status-card { width: 92%; max-width: 400px; padding: 32px 20px; }
+
+    .status-wa-box {
+        padding: 16px 18px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .status-wa-icon,
+    body.page-result .status-wa-icon {
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    .countdown {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+        padding: 14px 6px;
+    }
+    .countdown-item { padding: 0 8px; }
+    .countdown-angka { font-size: 22px; }
+    .countdown-unit { font-size: 11px; }
+    .countdown-pemisah { font-size: 18px; }
+}
+
+@media (max-width: 767px) {
+    .decor-dot,
+    .decor-blob-1,
+    .decor-blob-2,
+    .decor-blob-3,
+    .decor-star-1,
+    .decor-star-2,
+    .decor-circle { display: none; }
+
+    .decor-leaf-left,
+    .decor-leaf-right {
+        width: 28 0px;
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,172 @@
+/* Style navbar & footer dipakai bareng di halaman auth, recruitment, announc*/
+
+.uaki-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+a { text-decoration: none; }
+
+.uaki-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--hijau_tua);
+    padding: 16px 48px;
+    position: relative;
+    z-index: 1000;
+}
+
+.uaki-navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.uaki-navbar-logo img { width: 36px; height: 36px; object-fit: contain; }
+
+.uaki-navbar-menu {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.uaki-navbar-menu a {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.uaki-navbar-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.uaki-navbar-toggle span {
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.uaki-mobile-menu-overlay {
+    display: none;
+}
+
+/* Footer */
+.uaki-footer {
+    background-color: var(--hijau_tua);
+    color: #ffffff;
+    padding: 56px 0 0 0;
+    margin-top: auto;
+}
+
+.uaki-footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.uaki-footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.uaki-footer-logo img { width: 50px; height: 50px; object-fit: contain; }
+
+.uaki-footer-tentang span {
+    font-family: var(--font_monsterrat);
+    color: #FFE55D;
+    font-weight: 700;
+}
+
+.uaki-footer-tentang p { font-size: 14px; line-height: 1.7; color: #FAF8F3; }
+
+.uaki-footer-kolom h4 {
+    font-family: var(--font_monsterrat);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #FFE55D;
+}
+
+.uaki-footer-kolom ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+
+.uaki-footer-kolom ul li a {
+    font-size: 13px;
+    color: #FAF8F3;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.uaki-footer-kolom ul li a:hover { color: #ffffff; }
+
+.uaki-ikon-footer { width: 14px; height: 14px; flex-shrink: 0; display: flex; }
+.uaki-ikon-footer img { width: 100%; height: 100%; display: block; }
+
+.uaki-footer-kolom p { font-size: 13px; color: rgba(255, 255, 255, 0.75); line-height: 1.7; }
+
+.uaki-sosial-ikon { display: flex; gap: 12px; }
+.uaki-ikon-sosial {
+    width: 38px; height: 38px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    transition: background-color 0.2s;
+}
+
+.uaki-ikon-sosial img { width: 18px; height: 18px; display: block; }
+.uaki-ikon-sosial:hover { background-color: rgba(255, 255, 255, 0.3); }
+
+.uaki-footer-bawah {
+    border-top: 2px solid #FFFAE2;
+    padding: 20px 0;
+}
+
+.uaki-footer-bawah p {
+    text-align: center;
+    font-size: 13px;
+    color: #FFFAE2;
+    margin: 0;
+}
+
+@media (max-width: 860px) {
+    .uaki-navbar-menu { display: none; }
+    .uaki-navbar-toggle { display: flex; }
+
+    .uaki-mobile-menu-overlay.active {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--hijau_tua);
+        padding: 16px 24px;
+    }
+
+    .uaki-mobile-menu-links { list-style: none; display: flex; flex-direction: column; gap: 14px; padding: 0; margin: 0; }
+    .uaki-mobile-menu-links a { color: #ffffff; }
+
+    .uaki-footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px) {
+    .uaki-footer-grid { grid-template-columns: 1fr; }
+}

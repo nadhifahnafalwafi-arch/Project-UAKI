@@ -1,0 +1,19 @@
+/*  Variabel warna & font bersama untuk SEMUA halaman baru
+(auth, recruitment, announcement, result, form, success). */
+
+:root {
+    --hijau_tua: #626F44;
+    --hijau_teks: #2d3a1e;
+    --hijau_muda: #8CA267;
+    --bg_cream: #FFFAE2;
+    --card_cream: #fffdf7;
+    --oranye: #ED861E;
+    --merah: #EC0000;
+
+    --font_inter: 'Inter', sans-serif;
+    --font_monsterrat: 'Montserrat', sans-serif;
+
+    --card_radius: 20px;
+    --input_radius: 10px;
+    --card_shadow: 0 10px 30px rgba(45, 58, 30, 0.3);
+}

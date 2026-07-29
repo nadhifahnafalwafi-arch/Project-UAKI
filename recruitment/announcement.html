@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengumuman Calon Staff Muda - UAKI UB</title>
+    <link rel="icon" href="/assets-hero/logoUAKI.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap">
+
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../components/components.css">
+    <link rel="stylesheet" href="status.css">
+</head>
+<body class="page-announcement d-flex flex-column min-vh-100">
+
+    <div id="uakiNavbar"></div>
+
+    <main class="status-wrapper">
+        <div class="status-decor" aria-hidden="true">
+            <img src="/assets-recruitment/dot.svg" class="decor-dot" alt="">
+            <img src="/assets-recruitment/small-blob.svg" class="decor-blob-1" alt="">
+            <img src="/assets-recruitment/star.svg" class="decor-star-1" alt="">
+            <img src="/assets-recruitment/circle.svg" class="decor-circle" alt="">
+            <img src="/assets-recruitment/daun-crop.svg" class="decor-leaf-left" alt="">
+            <img src="/assets-recruitment/small-blob.svg" class="decor-blob-2" alt="">
+            <img src="/assets-recruitment/star.svg" class="decor-star-2" alt="">
+            <img src="/assets-recruitment/big-blob.svg" class="decor-blob-3" alt="">
+            <img src="/assets-recruitment/daun-crop.svg" class="decor-leaf-right" alt="">
+        </div>
+
+        <div class="status-card status-card-transparent">
+
+            <h1 class="status-title">Pengumuman Calon Staff Muda UAKI</h1>
+            <p class="status-subtitle">Pengumuman hasil seleksi akan segera dirilis. Tetap semangat dan jangan lupa berdoa ya!</p>
+
+            <div class="status-divider">
+                <img src="/assets-recruitment/star2.svg" alt="">
+            </div>
+
+            <p class="countdown-label" id="labelCountdown">Pengumuman akan dibuka dalam:</p>
+
+            <div class="countdown" id="countdownBox">
+                <div class="countdown-item">
+                    <div class="countdown-angka" id="countdownHari">00</div>
+                    <div class="countdown-unit">Hari</div>
+                </div>
+                <div class="countdown-pemisah">|</div>
+                <div class="countdown-item">
+                    <div class="countdown-angka" id="countdownJam">00</div>
+                    <div class="countdown-unit">Jam</div>
+                </div>
+                <div class="countdown-pemisah">|</div>
+                <div class="countdown-item">
+                    <div class="countdown-angka" id="countdownMenit">00</div>
+                    <div class="countdown-unit">Menit</div>
+                </div>
+                <div class="countdown-pemisah">|</div>
+                <div class="countdown-item">
+                    <div class="countdown-angka" id="countdownDetik">00</div>
+                    <div class="countdown-unit">Detik</div>
+                </div>
+            </div>
+
+            <p class="status-footnote" id="pesanCountdown">Jangan lupa pantau terus informasi di website dan grup WhatsApp ya!</p>
+
+            <!-- Muncul otomatis ganti countdown-box begitu waktu habis, bisa lihat status.js -->
+            <div class="status-lanjut-wrap" id="tombolBukaWrap" style="display: none;">
+                <button type="button" class="btn-status-primary" id="tombolBukaPengumuman">
+                    Buka Pengumuman <img src="/assets-recruitment/icon-arrow-right.svg" class="btn-icon-inline" alt="">
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="uakiFooter"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../components/components.js"></script>
+    <script src="status.js"></script>
+</body>
+</html>
