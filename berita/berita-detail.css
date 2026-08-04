@@ -1,0 +1,245 @@
+/* berita-detail.css - Halaman isi/detail satu artikel. */
+
+/* Base */
+.detail-artikel {
+    background-color: #fffae2;
+    padding: 60px 24px 90px;
+    position: relative;
+    overflow: hidden;
+}
+
+.detail-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.detail-decor {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.detail-decor img { position: absolute; }
+
+.detail-daun-kiri {
+    left: -220px;
+    bottom: -80px;
+    width: 480px;
+    transform: scaleX(-1);
+    z-index: 1;
+}
+
+.detail-daun-kanan {
+    right: -220px;
+    bottom: -80px;
+    width: 480px;
+    z-index: 1;
+}
+
+.detail-lingkaran-kiri {
+    left: -40px;
+    bottom: -60px;
+    width: 160px;
+    transform: rotate(135deg);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+.detail-lingkaran-kanan {
+    right: -30px;
+    bottom: -70px;
+    width: 160px;
+    opacity: 0.6;
+    z-index: 0;
+}
+
+/* Kartu detail */
+.detail-card {
+    background-color: #fdfcf6;
+    border: 1.5px solid #626F44;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.detail-hero {
+    padding: 32px 44px 0;
+}
+
+.detail-hero img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+.detail-isi {
+    padding: 24px 44px 40px;
+}
+
+.detail-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.detail-badge {
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 6px 18px;
+    border-radius: 6px;
+}
+
+.detail-titik {
+    color: #626F44;
+    font-size: 14px;
+}
+
+.detail-tanggal {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ED861E;
+}
+
+.detail-judul {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #626F44;
+    line-height: 1.35;
+    margin-bottom: 20px;
+}
+
+.detail-divider {
+    height: 1px;
+    background-color: #e4dfc9;
+    margin-bottom: 20px;
+}
+
+.detail-penulis {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.detail-penulis-foto {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.detail-penulis-teks {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+}
+
+.detail-penulis-nama {
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFCF4F;
+}
+
+.detail-penulis-peran {
+    font-size: 12px;
+    font-weight: 500;
+    color: #A6B465;
+}
+
+
+.detail-konten {
+    margin-bottom: 30px;
+}
+
+.detail-konten p {
+    font-family: "Inter", sans-serif;
+    font-size: 13.5px;
+    color: #626F44;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.detail-konten p:last-child { margin-bottom: 0; }
+
+.detail-share {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding-top: 22px;
+    border-top: 1px solid #e4dfc9;
+    margin-bottom: 28px;
+}
+
+.detail-share-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #626F44;
+}
+
+.detail-share-tombol {
+    display: flex;
+    gap: 10px;
+}
+
+.detail-share-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background-color: #A6B465;
+    border: 1.5px solid #A6B465;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+.detail-share-btn:hover {
+    background-color: #8fa04f;
+    transform: translateY(-2px);
+}
+
+.detail-share-btn.tersalin {
+    background-color: #626F44;
+    border-color: #626F44;
+}
+
+.detail-kembali {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #626F44;
+    text-decoration: none;
+    background-color: #ffffff;
+    border: 1.5px solid #626F44;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.2s;
+}
+
+.detail-kembali:hover { background-color: #f3f6ec; }
+
+@media screen and (max-width: 767px) {
+    .detail-decor { display: none; }
+    .detail-hero { padding: 24px 22px 0; }
+    .detail-hero img { height: 190px; border-radius: 16px; }
+    .detail-isi { padding: 18px 22px 30px; }
+    .detail-judul { font-size: 21px; }
+}
+
+@media screen and (max-width: 480px) {
+    .detail-artikel { padding: 40px 14px 60px; }
+}

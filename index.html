@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAKI UB</title>
+    <link rel="icon" href="assets-hero/logoUAKI.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hero-buka.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap">
+</head>
+<body>
+
+    <!-- Splash Screen : Muncul sebentar di awal sebelum masuk ke halaman Coming Soon -->
+    <div class="splash-screen" id="splashScreen">
+        <img src="assets-hero/logoUAKI.svg" alt="Logo UAKI UB" class="splash-logo">
+    </div>
+
+    <!-- Navbar : Menu hijau di bagian atas -->
+    <!-- Navbar Tutup:  dikasih id biar bisa ditoggle bareng hero.  -->
+   <nav class="navbar" id="navbarTutup">
+        <div class="navbar-logo">
+            <img src="assets-hero/logoUAKI.svg" alt="Logo UAKI UB">
+            <span>UAKI UB</span>
+        </div>
+
+        <button class="navbar-toggle" id="menuToggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="navbar-menu">
+            <li><a href="../index.html">Beranda</a></li>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Galeri</a></li>
+            <li><a href="berita/berita.html">Berita</a></li>
+        </ul>
+
+        <div class="mobile-menu-overlay" id="mobileMenu">
+            <ul class="mobile-menu-links">
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Galeri</a></li>
+                <li><a href="berita/berita.html">Berita</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Navbar Buka: muncul saat pendaftaran dibuka atau countdown selesai  -->
+    <nav class="navbar" id="navbarBuka" style="display: none;">
+        <div class="navbar-logo">
+            <img src="assets-hero/logoUAKI.svg" alt="Logo UAKI UB">
+            <span>UAKI UB</span>
+        </div>
+
+        <button class="navbar-toggle" id="menuToggleBuka" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobileMenuBuka">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="navbar-buka-kanan">
+            <ul class="navbar-menu">
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Galeri</a></li>
+                <li><a href="berita/berita.html">Berita</a></li>
+            </ul>
+            <a href="auth/login.html" class="btn-navbar-daftar">Daftar OPREC</a>
+        </div>
+
+        <div class="mobile-menu-overlay" id="mobileMenuBuka">
+            <ul class="mobile-menu-links">
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Galeri</a></li>
+                <li><a href="berita/berita.html">Berita</a></li>
+                <li><a href="auth/login.html">Daftar OPREC</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Section Hero : Bagian utama yang Isinya Coming Soon-->
+<section class="hero">
+
+        <!-- Dekorasi khusus tampilan Coming Soon  -->
+        <div class="dekorasi-tutup" id="dekorasiTutup">
+            <img src="assets-hero/daunBayangan.svg" alt="" class="dekorasi daun-bayangan-kiri">
+            <img src="assets-hero/daun.svg" alt="" class="dekorasi daun-utuh-kiri">
+
+            <img src="assets-hero/daunCrop.svg" alt="" class="dekorasi daun-crop-kanan">
+
+            <img src="assets-hero/elemen2.svg" alt="" class="dekorasi dot-kiri">
+            <img src="assets-hero/elemen2.svg" alt="" class="dekorasi dot-kanan">
+            <img src="assets-hero/elemen2.svg" alt="" class="dekorasi dot-tengah">
+
+            <img src="assets-hero/star.svg" alt="" class="dekorasi star-1">
+            <img src="assets-hero/star.svg" alt="" class="dekorasi star-2">
+            <img src="assets-hero/star.svg" alt="" class="dekorasi star-3">
+            <img src="assets-hero/elemen4.svg" alt="" class="dekorasi elemen-petik">
+
+            <img src="assets-hero/daunBayangan.svg" alt="" class="dekorasi daun-bawah-bayangan">
+            <img src="assets-hero/daun.svg" alt="" class="dekorasi daun-bawah-belakang">
+            <img src="assets-hero/daun.svg" alt="" class="dekorasi daun-bawah-depan">
+            <img src="assets-hero/ellipse.svg" alt="" class="dekorasi ellipse-bawah-kanan">
+            <img src="assets-hero/elemen3.svg" alt="" class="dekorasi elemen-kiri">
+            <img src="assets-hero/elemen2.svg" alt="" class="dekorasi dot-kiri-bawah">
+            <img src="assets-hero/ellipse.svg" alt="" class="dekorasi ellipse-bawah-kiri">
+            <img src="assets-hero/star.svg" alt="" class="dekorasi star-4">
+        </div>
+
+        <!-- Dekorasi khusus tampilan Open Recruitment -->
+        <div class="dekorasi-buka" id="dekorasiBuka" style="display: none;">
+            <img src="assets-hero/elemen2.svg" alt="" class="dekorasi buka-dot-kiri">
+            <img src="assets-hero/daunCrop.svg" alt="" class="dekorasi buka-daun-atas">
+            <img src="assets-hero/big-blob.svg" alt="" class="dekorasi buka-blob-atas">
+
+            <img src="assets-hero/daunCrop.svg" alt="" class="dekorasi buka-daun-1">
+            <img src="assets-hero/daun.svg" alt="" class="dekorasi buka-daun-2">
+            <img src="assets-hero/ellipse.svg" alt="" class="dekorasi buka-lingkaran">
+            <img src="assets-hero/small-blob.svg" alt="" class="dekorasi buka-blob-bawah">
+        </div>
+
+        <div class="hero-konten">
+
+            <!-- tampilan sebelum pendaftaran dibuka (Coming Soon) -->
+            <div id="heroTutup">
+
+                <div class="badge-recruitment">
+                    Open Recruitment Staff Muda UAKI 2026
+                </div>
+
+                <div class="hero-tengah">
+
+                    <div class="foto-sisi foto-sisi-kiri">
+                        <div class="foto-sisi-scaler">
+                            <img src="assets-hero/elemen1.svg" alt="" class="lakban lakban-kiri-atas">
+                            <img src="assets-hero/fotoUAKI.JPG" alt="Kegiatan UAKI" class="foto-polaroid foto-kiri-atas">
+                            <img src="assets-hero/elemen1.svg" alt="" class="lakban lakban-kiri-bawah">
+                            <img src="assets-hero/fotoUAKI.JPG" alt="Kegiatan UAKI" class="foto-polaroid foto-kiri-bawah">
+
+                            <img src="assets-hero/circle.svg" alt="Be a Part of UAKI!" class="circle-kiri">
+                        </div>
+                    </div>
+
+                    <div class="hero-judul">
+                         <h1><span class="kata-coming">COMING</span><br><span class="kata-soon">SOON!</span></h1>
+                        <p class="hero-deskripsi">
+                            Persiapkan dirimu menjadi bagian dari<br>
+                            perjalanan luar biasa bersama UAKI.
+                        </p>
+                        <p class="hero-counter-info">
+                            <img src="assets-hero/elemen5.svg" class="ikon-menunggu">
+                            <span class="jumlah-pendaftar" id="jumlahPendaftar" data-target="1234">0</span> Maba sedang menunggu pendaftaran dibuka!
+                        </p>
+                    </div>
+
+                    <div class="foto-sisi foto-sisi-kanan">
+                        <div class="foto-sisi-scaler">
+                            <img src="assets-hero/elemen1.svg" alt="" class="lakban lakban-kanan-atas">
+                            <img src="assets-hero/fotoUAKI.JPG" alt="Kegiatan UAKI" class="foto-polaroid foto-kanan-atas">
+                            <img src="assets-hero/elemen1.svg" alt="" class="lakban lakban-kanan-bawah">
+                            <img src="assets-hero/fotoUAKI.JPG" alt="Kegiatan UAKI" class="foto-polaroid foto-kanan-bawah">
+                            <img src="assets-hero/elemen1.svg" alt="" class="lakban lakban-circle">
+                            <img src="assets-hero/note.svg" alt="Upgrade Yourself" class="note-kanan">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-angka">02</span>
+                        <span class="countdown-label">Hari</span>
+                    </div>
+                    <div class="countdown-pemisah">|</div>
+                    <div class="countdown-item">
+                        <span class="countdown-angka">23</span>
+                        <span class="countdown-label">Jam</span>
+                    </div>
+                    <div class="countdown-pemisah">|</div>
+                    <div class="countdown-item">
+                        <span class="countdown-angka">59</span>
+                        <span class="countdown-label">Menit</span>
+                    </div>
+                    <div class="countdown-pemisah">|</div>
+                    <div class="countdown-item">
+                        <span class="countdown-angka">59</span>
+                        <span class="countdown-label">Detik</span>
+                    </div>
+                </div>
+
+                <button class="tombol-utama">
+                    <img src="assets-hero/bel.svg" class="ikon-bel">
+                     Jangan Sampai Ketinggalan!
+                </button>
+
+            </div>
+
+            <!-- tampilan setelah pendaftaran resmi dibuka -->
+            <div id="heroBuka" style="display: none;">
+
+                <div class="hero-buka">
+
+                    <div class="hero-buka-teks">
+                        <div class="badge-recruitment badge-buka">
+                            Open Recruitment Staff Muda UAKI 2026
+                        </div>
+                        <h1 class="hero-buka-judul">
+                            Bergabunglah<br>
+                            Menjadi Bagian dari<br>
+                            Perjalanan <span class="kata-uaki">UAKI!</span>
+                        </h1>
+                        <img src="assets-hero/star.svg" alt="" class="bintang-judul bintang-judul-1">
+                        <img src="assets-hero/star.svg" alt="" class="bintang-judul bintang-judul-2">
+                        <p class="hero-buka-desc">
+                            Kesempatan untuk berkembang, berkontribusi, dan<br>
+                            memberi dampak positif bersama UAKI.
+                        </p>
+                        <a href="auth/login.html" class="tombol-utama tombol-daftar">
+                            <img src="assets-hero/pensil.svg" class="ikon-bel">
+                            Daftar Sekarang!
+                        </a>
+                    </div>
+
+                    <div class="hero-buka-foto">
+                        <img src="assets-hero/bayangan-foto-utama.svg" alt="" class="bayangan-foto-utama">
+                        <img src="assets-hero/fotoUAKI.JPG" alt="Kegiatan UAKI" class="foto-utama">
+                        <img src="assets-hero/daunCrop.svg" alt="" class="daun-foto-kecil">
+                        <div class="foto-kecil-wrap">
+                            <img src="assets-hero/fotoUAKI.JPG" alt="Kegiatan UAKI" class="foto-kecil">
+                            <img src="assets-hero/fotoUAKI.JPG" alt="Kegiatan UAKI" class="foto-kecil">
+                        </div>
+                        <div class="circle-badge">Be a<br>Part of<br>UAKI!</div>
+                    </div>
+
+                </div>
+
+                <div class="stat-bar">
+                    <div class="stat-item">
+                        <span class="stat-icon"><img src="assets-hero/icon-alumni.svg" alt=""></span>
+                        <span class="stat-teks"><span class="stat-angka">200+</span><span class="stat-label">Alumni Staff Muda</span></span>
+                    </div>
+                    <div class="countdown-pemisah">|</div>
+                    <div class="stat-item">
+                        <span class="stat-icon"><img src="assets-hero/icon-progja.svg" alt=""></span>
+                        <span class="stat-teks"><span class="stat-angka">10+</span><span class="stat-label">Progam Kerja</span></span>
+                    </div>
+                    <div class="countdown-pemisah">|</div>
+                    <div class="stat-item">
+                        <span class="stat-icon"><img src="assets-hero/icon-departemen.svg" alt=""></span>
+                        <span class="stat-teks"><span class="stat-angka">7</span><span class="stat-label">Departemen</span></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Section Tengah : Bagian tengah yang Isinya "Tentang Staff Muda" + "Waitlist Pesan" + "Alasan Gabung UAKI" -->
+    <section class="section-tengah">
+        <div class="container">
+            <div class="grid-dua-kolom">
+
+                <div class="kolom-kiri" id="kolomKiri">
+                    <div class="kartu reveal">
+                        <h2 class="kartu-judul">
+                            <span class="ikon-judul">
+                                <img src="assets-tengah/icon-info.svg" alt="Ikon Tentang">
+                            </span>
+                            TENTANG STAFF MUDA
+                        </h2>
+                        <p class="teks-deskripsi">
+                            Staff Muda UAKI 2026 hadir sebagai wadah bagi pemuda untuk belajar,
+                            berkembang, dan berkontribusi melalui berbagai departemen. Peserta akan
+                            mendapatkan pengalaman organisasi secara langsung, mulai dari perencanaan
+                            hingga pelaksanaan program.
+                        </p>
+                        <p class="teks-deskripsi">
+                            Melalui UAKI, kamu akan mengembangkan skill komunikasi, kerja sama tim,
+                            kepemimpinan, sekaligus memperluas relasi bersama orang-orang luar biasa.
+                        </p>
+
+                        <div class="daftar-divisi">
+                            <span class="tag-divisi">CM</span>
+                            <span class="tag-divisi">EKRAF</span>
+                            <span class="tag-divisi">HUMAS</span>
+                            <span class="tag-divisi">SYIAR</span>
+                            <span class="tag-divisi">MENTORING</span>
+                            <span class="tag-divisi">MUCC</span>
+                            <span class="tag-divisi">RAB</span>
+                        </div>
+                    </div>
+
+                    <div class="kartu kartu-alasan reveal">
+                        <h2 class="kartu-judul">
+                            <span class="ikon-judul">
+                                <img src="assets-tengah/icon-gabung.svg" alt="Ikon Kenapa Harus Gabung">
+                            </span>
+                            Kenapa Harus Gabung <span class="teks-hijau">UAKI</span>?
+                        </h2>
+
+                        <div class="grid-empat-kolom">
+                            <div class="kartu-alasan-item reveal">
+                                <div class="ikon-alasan">
+                                    <img src="assets-tengah/icon-community.svg" alt="">
+                                </div>
+                                <h3>Komunitas Positif</h3>
+                                <p>Lingkungan yang supportif dan penuh kebaikan.</p>
+                            </div>
+                            <div class="kartu-alasan-item reveal">
+                                <div class="ikon-alasan">
+                                    <img src="assets-tengah/icon-pengembangan.svg" alt="">
+                                </div>
+                                <h3>Pengembangan Diri</h3>
+                                <p>Tingkatkan skill, Leadership, dan potensi terbaikmu.</p>
+                            </div>
+                            <div class="kartu-alasan-item reveal">
+                                <div class="ikon-alasan">
+                                    <img src="assets-tengah/icon-pengalaman.svg" alt="">
+                                </div>
+                                <h3>Pengalaman Nyata</h3>
+                                <p>Terlibat langsung dalam berbagai program dan kegiatan berdampak.</p>
+                            </div>
+                            <div class="kartu-alasan-item reveal">
+                                <div class="ikon-alasan">
+                                    <img src="assets-tengah/icon-relasi.svg" alt="">
+                                </div>
+                                <h3>Relasi & Networking</h3>
+                                <p>Bertemu teman baru dan bangun jaringan yang bermanfaat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kartu kartu-waitlist reveal" id="kartuWaitlist">
+                    <h2 class="kartu-judul">
+                        <span class="ikon-judul">
+                            <img src="assets-tengah/icon-pesan.svg" alt="Ikon Waitlist Pesan">
+                        </span>
+                        WAITLIST PESAN
+                    </h2>
+
+                    <div class="daftar-pesan" id="daftarPesan"></div>
+
+                    <div class="form-waitlist">
+                        <input type="text" id="inputPesan" placeholder="Tulis harapan dan semangatmu disini...">
+                        <div class="form-baris-bawah">
+                            <input type="text" id="inputNama" placeholder="Nama">
+                            <input type="text" id="inputFakultas" placeholder="Fakultas & Angkatan">
+                            <button type="button" class="tombol-kirim" id="tombolKirim">
+                               <img src="assets-tengah/icon-kirim.svg" alt="Kirim">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section Faq : Bagian FAQ yang Isinya Pertanyaan -->
+    <section class="section-faq">
+        <div class="container">
+            <div class="faq-wrapper reveal">
+
+                <div class="faq-konten">
+                    <h2 class="kartu-judul">
+                        <span class="ikon-judul">
+                            <img src="assets-faq/icon-faq.svg" alt="FAQ">
+                        </span>
+                        FAQ
+                    </h2>
+
+                    <div id="daftarFaq"></div>
+                </div>
+
+                <div class="faq-ilustrasi">
+                    <img src="assets-faq/ClipBoard.svg" alt="FAQ Illustration">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer : Bagian bawah halaman websitenya -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-tentang">
+                    <div class="footer-logo">
+                        <img src="assets-hero/logoUAKI.svg" alt="Logo UAKI UB">
+                        <span>UAKI UB</span>
+                    </div>
+                    <p>
+                        United for All Knowledge and Innovation -
+                        Membangun generasi muslim yang berilmu dan berinovasi.
+                    </p>
+                </div>
+
+                <div class="footer-kolom">
+                    <h4>Tautan</h4>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span class="ikon-footer">
+                                    <img src="assets-bawah/icon-beranda.svg" alt="">
+                                </span>
+                                Beranda
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="ikon-footer">
+                                    <img src="assets-bawah/icon-tentang.svg" alt="">
+                                </span>
+                                Tentang kami
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="ikon-footer">
+                                    <img src="assets-bawah/icon-galeri.svg" alt="">
+                                </span>
+                                Galeri
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="ikon-footer">
+                                    <img src="assets-bawah/icon-artikel.svg" alt="">
+                                </span>
+                                Artikel
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="ikon-footer">
+                                    <img src="assets-bawah/icon-informasi.svg" alt="">
+                                </span>
+                                Informasi
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-kolom">
+                    <h4>Media Sosial</h4>
+                    <div class="sosial-ikon">
+                        <a href="https://www.instagram.com/uakiub/" class="ikon-sosial">
+                            <img src="assets-bawah/icon-instagram.svg" alt="Instagram">
+                        </a>
+                        <a href="http://www.youtube.com/@uakiub" class="ikon-sosial">
+                            <img src="assets-bawah/icon-youtube.svg" alt="YouTube">
+                        </a>
+                        <a href="#" class="ikon-sosial">
+                            <img src="assets-bawah/icon-whatsapp.svg" alt="WhatsApp">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-kolom">
+                    <h4>Alamat</h4>
+                    <p>Jl. Veteran No.8, Ketawanggede, Kec. Lowokwaru, Kota Malang, Jawa Timur 65145</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bawah">
+            <div class="container">
+                <p>Made With Love By UAKI Development Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="hero-buka.js"></script>
+</body>
+</html>

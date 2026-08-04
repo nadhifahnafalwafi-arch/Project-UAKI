@@ -1,0 +1,314 @@
+/* Berita.css - Halaman daftar artikel/berita. */
+
+/* Base */
+.berita {
+    background-color: #fffae2;
+    padding: 60px 24px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.berita-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.berita-decor {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.berita-decor img { position: absolute; }
+
+.berita-dot-atas {
+    left: 40px;
+    top: -20px;
+    width: 80px;
+    opacity: 0.5;
+}
+
+.berita-daun-atas {
+    right: -230px;
+    top: -230px;
+    width: 530px;
+    transform: rotate(-15deg);
+}
+
+.berita-daun-crop {
+    left: -160px;
+    bottom: 20px;
+    width: 340px;
+    transform: scaleX(-1);
+    z-index: 2;
+}
+
+.berita-daun-bawah {
+    left: 5px;
+    bottom: -170px;
+    width: 250px;
+    transform: rotate(240deg);
+    z-index: 3;
+}
+
+.berita-lingkaran-bawah {
+    left: -80px;
+    bottom: -120px;
+    width: 230px;
+    transform: rotate(135deg);
+    z-index: 0;
+}
+
+.berita-blob-bawah {
+    right: -20px;
+    bottom: -80px;
+    width: 180px;
+    opacity: 0.9;
+    transform: scaleX(-1);
+}
+
+.berita-dot-bawah {
+    right: 200px;
+    bottom: -30px;
+    width: 80px;
+    opacity: 0.5;
+}
+
+.berita-judul {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 44px;
+    color: #626F44;
+    margin-bottom: 4px;
+}
+
+.berita-subjudul {
+    font-size: 15px;
+    font-weight: 600;
+    color: #626f44;
+    white-space: nowrap;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.berita-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 12px;
+}
+
+.berita-search {
+    display: flex;
+    align-items: center;
+    background-color: #fdfcf6;
+    border: 1px solid #626F44;
+    border-radius: 10px;
+    padding: 4px;
+    width: 380px;
+    flex-shrink: 0;
+}
+
+.berita-search input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: #4a5e3a;
+    flex: 1;
+    font-family: "Inter", sans-serif;
+}
+
+.berita-search input::placeholder { color: #a9a992; }
+
+.berita-search button {
+    background: transparent;
+    border: none;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.berita-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.berita-tab {
+    background-color: #ffffff;
+    border: 1.5px solid #626f44;
+    color: #4a5e3a;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.berita-tab.is-aktif {
+    background-color: #626f44;
+    color: #ffffff;
+}
+
+.berita-tab:hover:not(.is-aktif) { background-color: #f3f6ec; }
+
+.berita-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.kartu-artikel {
+    background-color: #fdfcf6;
+    border: 1px solid #626F44;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kartu-artikel:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 22px rgba(0, 0, 0, 0.22);
+}
+
+.kartu-artikel:focus-visible {
+    outline: 2px solid #ED861E;
+    outline-offset: 2px;
+}
+
+.kartu-artikel-thumb {
+    position: relative;
+    height: 160px;
+}
+
+.kartu-artikel-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.kartu-artikel-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 7px 18px;
+    border-radius: 6px;
+}
+
+.badge-artikel { background-color: #6381DB; }
+.badge-informasi { background-color: #ED861E; }
+.badge-inspirasi { background-color: #FFCF4F; color: #2d3a1e; }
+.badge-opini { background-color: #626F44; }
+.badge-kegiatan { background-color: #1E1E1E; }
+
+.kartu-artikel-isi { padding: 16px 18px 18px; }
+
+.kartu-artikel-judul {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #626F44;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.kartu-artikel-desc {
+    font-size: 12.5px;
+    color: #626F44;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.kartu-artikel-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ece6d0;
+    padding-top: 12px;
+}
+
+.kartu-artikel-tanggal {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #ED861E;
+}
+
+.kartu-artikel-baca {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #626F44;
+    text-decoration: none;
+}
+
+/* Pagination */
+.berita-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.halaman-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    border: 1.5px solid #626f44;
+    background-color: #ffffff;
+    color: #4a5e3a;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+}
+
+.halaman-btn.is-aktif {
+    background-color: #626f44;
+    color: #ffffff;
+}
+
+.halaman-btn:hover:not(.is-aktif) { background-color: #f3f6ec; }
+
+@media screen and (max-width: 900px) {
+    .berita-grid { grid-template-columns: repeat(2, 1fr); }
+    .berita-header { flex-direction: column; align-items: flex-start; }
+    .berita-search { width: 100%; }
+    .berita-subjudul { white-space: normal; }
+}
+
+@media screen and (max-width: 767px) {
+    .berita-decor { display: none; }
+}
+
+@media screen and (max-width: 600px) {
+    .berita-grid { grid-template-columns: 1fr; }
+    .berita-judul { font-size: 28px; }
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Artikel - UAKI UB</title>
+    <link rel="icon" href="../assets-hero/logoUAKI.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="berita.css">
+    <link rel="stylesheet" href="berita-detail.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="../assets-hero/logoUAKI.svg" alt="Logo UAKI UB">
+            <span>UAKI UB</span>
+        </div>
+
+        <button class="navbar-toggle" id="menuToggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="navbar-menu">
+            <li><a href="../index.html">Beranda</a></li>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Galeri</a></li>
+            <li><a href="berita.html">Berita</a></li>
+        </ul>
+
+        <div class="mobile-menu-overlay" id="mobileMenu">
+            <ul class="mobile-menu-links">
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Galeri</a></li>
+                <li><a href="berita.html">Berita</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Section Detail Artikel -->
+    <section class="detail-artikel">
+
+        <div class="detail-decor" aria-hidden="true">
+            <img src="../assets-berita/daunCrop.svg" alt="" class="detail-daun-kiri">
+            <img src="../assets-berita/daunCrop.svg" alt="" class="detail-daun-kanan">
+            <img src="../assets-berita/ellipse.svg" alt="" class="detail-lingkaran-kiri">
+            <img src="../assets-berita/ellipse.svg" alt="" class="detail-lingkaran-kanan">
+        </div>
+
+        <div class="detail-container">
+            <article class="detail-card" id="detailCard">
+
+                <div class="detail-hero">
+                    <img src="" alt="" id="detailGambar">
+                </div>
+
+                <div class="detail-isi">
+
+                    <div class="detail-meta-row">
+                        <span class="detail-badge" id="detailBadge"></span>
+                        <span class="detail-titik">&bull;</span>
+                        <span class="detail-tanggal" id="detailTanggal"></span>
+                    </div>
+
+                    <h1 class="detail-judul" id="detailJudul"></h1>
+
+                    <div class="detail-divider"></div>
+
+                    <div class="detail-penulis">
+                        <img src="" alt="" class="detail-penulis-foto" id="detailPenulisFoto">
+                        <div class="detail-penulis-teks">
+                            <span class="detail-penulis-nama" id="detailPenulisNama"></span>
+                            <span class="detail-penulis-peran" id="detailPenulisPeran"></span>
+                        </div>
+                    </div>
+
+                    <div class="detail-konten" id="detailKonten">
+                        <!-- Diisi otomatis dari data-artikel.js  -->
+                    </div>
+
+                    <div class="detail-share">
+                        <span class="detail-share-label">Bagikan Artikel ini:</span>
+                        <div class="detail-share-tombol">
+                            <button type="button" class="detail-share-btn" id="shareInstagram" aria-label="Bagikan ke Instagram">
+                                <img src="../assets-berita/icon-instagram.svg" alt="">
+                            </button>
+                            <button type="button" class="detail-share-btn" id="shareWhatsapp" aria-label="Bagikan ke WhatsApp">
+                                <img src="../assets-berita/icon-whatsapp.svg" alt="">
+                            </button>
+                            <button type="button" class="detail-share-btn" id="shareLink" aria-label="Salin tautan artikel">
+                                <img src="../assets-berita/icon-link.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <a href="berita.html" class="detail-kembali">
+                        <img src="../assets-berita/icon-panah-kiri.svg" alt="">
+                        Kembali Ke Artikel
+                    </a>
+
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-tentang">
+                    <div class="footer-logo">
+                        <img src="../assets-hero/logoUAKI.svg" alt="Logo UAKI UB">
+                        <span>UAKI UB</span>
+                    </div>
+                    <p>
+                        United for All Knowledge and Innovation -
+                        Membangun generasi muslim yang berilmu dan berinovasi.
+                    </p>
+                </div>
+
+                <div class="footer-kolom">
+                    <h4>Tautan</h4>
+                    <ul>
+                        <li>
+                            <a href="../index.html">
+                                <span class="ikon-footer">
+                                    <img src="../assets-bawah/icon-beranda.svg" alt="">
+                                </span>
+                                Beranda
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="ikon-footer">
+                                    <img src="../assets-bawah/icon-tentang.svg" alt="">
+                                </span>
+                                Tentang kami
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="ikon-footer">
+                                    <img src="../assets-bawah/icon-galeri.svg" alt="">
+                                </span>
+                                Galeri
+                            </a>
+                        </li>
+                        <li>
+                            <a href="berita.html">
+                                <span class="ikon-footer">
+                                    <img src="../assets-bawah/icon-artikel.svg" alt="">
+                                </span>
+                                Artikel
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="ikon-footer">
+                                    <img src="../assets-bawah/icon-informasi.svg" alt="">
+                                </span>
+                                Informasi
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-kolom">
+                    <h4>Media Sosial</h4>
+                    <div class="sosial-ikon">
+                        <a href="https://www.instagram.com/uakiub/" class="ikon-sosial">
+                            <img src="../assets-bawah/icon-instagram.svg" alt="Instagram">
+                        </a>
+                        <a href="http://www.youtube.com/@uakiub" class="ikon-sosial">
+                            <img src="../assets-bawah/icon-youtube.svg" alt="YouTube">
+                        </a>
+                        <a href="#" class="ikon-sosial">
+                            <img src="../assets-bawah/icon-whatsapp.svg" alt="WhatsApp">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-kolom">
+                    <h4>Alamat</h4>
+                    <p>Jl. Veteran No.8, Ketawanggede, Kec. Lowokwaru, Kota Malang, Jawa Timur 65145</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bawah">
+            <div class="container">
+                <p>Made With Love By UAKI Development Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data-artikel.js"></script>
+    <script src="berita-detail.js"></script>
+</body>
+</html>
