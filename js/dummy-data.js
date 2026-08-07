@@ -1,4 +1,3 @@
-
 // Semua data dummy buat form oprec dikumpulin disini biar gampang
 
 var daftarFakultas = [
@@ -78,6 +77,7 @@ var daftarDepartemen = [
     { id: 'syiar', nama: 'Syiar', deskripsi: 'Program syiar kreatif dan edukatif bagi mahasiswa.' },
     { id: 'humas', nama: 'Hubungan Masyarakat (Humas)', deskripsi: 'Jejaring, kolaborasi, dan hubungan eksternal organisasi.' },
     { id: 'rab', nama: 'Rumah Amal Brawijaya (RAB)', deskripsi: 'Program sosial, pendidikan, lingkungan, dan pemberdayaan masyarakat.' },
+    { id: 'kp', nama: 'Keilmuan Pengajar (KP)', deskripsi: 'Program edukasi dan pembelajaran yang interaktif.' },
     { id: 'cm', nama: 'Creative Media (CM)', deskripsi: 'Desain, media sosial, dan konten kreatif organisasi.' },
     { id: 'ekraf', nama: 'Ekonomi Kreatif (Ekraf)', deskripsi: 'Kewirausahaan/UMKM, kemitraan, dan pengelolaan sekretariat.' },
     { id: 'mucc', nama: 'Muslimah Center Community (MuCC)', deskripsi: 'Pengembangan diri, pemberdayaan, dan penguatan akhwat muslimah.' }
